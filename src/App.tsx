@@ -4,7 +4,7 @@ import { useEffect } from "react";
 function App() {
   useEffect(() => {
     const handler = (event: { origin: string; data: { type: string; open: boolean; }; }) => {
-      if (event.origin !== "http://localhost:5174") return;
+      if (event.origin !== import.meta.env.VITE_URL_CHATBOT) return;
       if (event.data.type === "resize") {
         const iframe = document.getElementById("chatbot");
         const buttonHeight = "68px";
