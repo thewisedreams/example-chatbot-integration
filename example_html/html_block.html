@@ -58,13 +58,13 @@
   <iframe
     id="chatbot"
     title="chatbot"
-    src="http://localhost:5174/thewisedreams">
+    src="https://sac.tripilots.com/thewisedreams">
   </iframe>
 
   <script>
     (function() {
       function handler(event) {
-        if (event.origin !== import.meta.env.VITE_URL_CHATBOT) return;
+        if (event.origin !== "https://sac.tripilots.com") return;
 
         if (event.data && event.data.type === "resize") {
           var iframe = document.getElementById("chatbot");
